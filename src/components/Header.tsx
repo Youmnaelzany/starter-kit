@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Header() {
   return (
-    <header className="">
+    <header className="flex">
       <Image src="/logo.sv" alt="logo" width={148} height={25} />
       <nav className="hidden sm:flex">
         <ul className="flex items-center justify-between gap-12">
