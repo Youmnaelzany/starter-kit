@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Geist } from "next/font/google";
+import { Rubik } from "next/font/google";
 
-import { ThemeProvider } from "@/components/theme-provider";
+import Header from "@/components/Header";
 
 import "./globals.css";
 
-const geistSans = Geist({
+const rubik = Rubik({
   subsets: ["latin"],
   display: "swap",
   weight: ["400", "500", "600", "700"],
@@ -23,15 +23,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.className} m-0 box-border p-0 antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+      <body className={`${rubik.className} m-0 box-border p-0 antialiased`}>
+        <Header />
+        {children}
       </body>
     </html>
   );
